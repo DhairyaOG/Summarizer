@@ -7,10 +7,7 @@ dotenv.config();
 const app = express();
 const PORT = process.env.PORT || 5555;
 
-app.use(cors({
-  origin: 'https://summarizer-uxy3.vercel.app'
-}));
-
+app.use(cors());
 app.use(express.json());
 
 app.post('/summarize', async (req, res) => {
